@@ -13,14 +13,7 @@ var articles = {
     content: 
            `<p>
            This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.
-           </p>
-           <p>
-           This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.
-           </p>
-            <p>
-           
-           This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.This is the content for my first Article.
-            </p>`
+           </p>`
     
 },
     'article-two' : { 

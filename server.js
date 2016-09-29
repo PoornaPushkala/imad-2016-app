@@ -77,9 +77,18 @@ var htmlTemplate =`<html>
 return htmlTemplate;
 }
 
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter + 1;
+    res.send(counter.toString());
+});
+
 
 app.get('/:articleName',function (req, res) {
  //articleName = article-one
@@ -88,12 +97,8 @@ app.get('/:articleName',function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two',function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));   
-});
-
-app.get('/article-three',function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));   
+app.get('/ui/style.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.js'));
 });
 
 app.get('/ui/main.js', function (req, res) {
